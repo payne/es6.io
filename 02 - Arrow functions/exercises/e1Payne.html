@@ -43,11 +43,7 @@
   // map to an array of seconds
   const step4 = step3.map(timeString => {
 	  console.log('timeString=' + timeString);
-	  const parts = timeString.split(':');
-	  console.log(parts);
-	  const min = parts[0];
-	  const seconds = parts[1];
-	  //[min, seconds] = [ parts[0], parts[1] ];
+	  const [min, seconds] = timeString.split(':');
 	  return min*60 + seconds*1; // Note the implicit type conversion
   });
   console.log(step4);
